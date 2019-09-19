@@ -42,7 +42,7 @@
     "one-var": ["error", { "initialized": "never" }],
     "guard-for-in": 0,
     "no-invalid-this": 0,
-    "no-console": "error",
+    "no-console": ["error", { "allow": ["tron"] }],
     "no-debugger": 1,
     "comma-spacing": [
       "error",
