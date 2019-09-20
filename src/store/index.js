@@ -11,7 +11,9 @@ export default function configureStore(preloadedState) {
   const middlewareEnhancer = applyMiddleware(...middlewares);
 
   const enhancers = [ middlewareEnhancer, monitorReducersEnhancer ];
-  const composedEnhancers = compose( console.tron.createEnhancer(), composeWithDevTools(...enhancers));
+  const composedEnhancers =  process.env.NODE_ENV !== 'production' ?
+    compose(console.tron.createEnhancer(), composeWithDevTools(...enhancers)) :
+    composeWithDevTools(...enhancers);
 
   const store = createStore(rootReducers, preloadedState, composedEnhancers);
 

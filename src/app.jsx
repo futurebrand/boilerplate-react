@@ -12,6 +12,9 @@ import 'promise-polyfill/src/polyfill';
 const store = configureStore();
 
 function App() {
+  // console.log(process.env.config);
+  // console.log(process.env.NODE_ENV);
+
   return (
     <AppContainer>
       <Provider store={store}>

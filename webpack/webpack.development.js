@@ -1,6 +1,5 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -28,30 +27,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader?sourceMap' },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                path: resolve(__dirname, '../postcss.config.js')
-              }
-            }
-          },
-          {
-            loader: 'sass-loader?sourceMap',
-            options: {
-              includePaths: [
-                resolve(__dirname, '../src/styles'),
-                resolve(__dirname, '../node_modules')
-              ]
-            }
-          }
-        ]
-      },
-      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
@@ -71,19 +46,11 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      config: JSON.stringify(require(`../config/${process.env.NODE_ENV}.json`))
-    }),
     new webpack.LoaderOptionsPlugin({
       debug: false,
       options: {
         context: __dirname
       }
     }),
-    new HtmlWebpackPlugin({
-      template: '../src/index.html',
-      filename: 'index.html'
-    })
   ]
 };
