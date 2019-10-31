@@ -28,10 +28,18 @@ const theme = {
     opacity: 1;
     visibility: visible;
   `,
-
+  
   /* Functions */
-  color: (color) => `${theme.colors[color]}`,
-  mqMap: (mqValue) => `${theme.mq[mqValue]}`,
+  minScreen: (mq, style) => `
+    @media (min-width: ${theme.mq[mq]}) {
+      ${style}
+    }
+  `,
+  maxScreen: (mq, style) => `
+    @media (max-width: ${theme.mq[mq]}) {
+      ${style}
+    }
+  `,
 }
 
 export default theme;

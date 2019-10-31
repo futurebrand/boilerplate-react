@@ -7,9 +7,10 @@
     "node": ">10.13.0"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.js",
+    "dev": "NODE_ENV=development webpack-dev-server --hot --config webpack/webpack.config.js",
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.js",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "server": "http-server build -o"
   },
   "author": "",
   "license": "ISC",
@@ -68,6 +69,7 @@
     "favicons-webpack-plugin": "^1.0.2",
     "file-loader": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
     "lint-staged": "^9.2.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.18.2",
