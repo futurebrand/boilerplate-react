@@ -45,13 +45,3 @@ Studio Code with the following plugins:
 Before running git commit, the rules of ESLint and Stylelint are executed. If
 there is an error or some non-default code of the site will generate an error
 and you will not be able to commit.
-
-
-## Git Flow 
-
-```
-  git flow init
-  git flow feature start header
-  git flow feature publish header
-  git flow feature finish header
-```
