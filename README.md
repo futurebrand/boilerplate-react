@@ -45,3 +45,10 @@ Studio Code with the following plugins:
 Before running git commit, the rules of ESLint and Stylelint are executed. If
 there is an error or some non-default code of the site will generate an error
 and you will not be able to commit.
+
+
+## Roadmap
+
+- [ ] Redux Saga
+- [ ] TypeScript
+- [ ] Tests!
