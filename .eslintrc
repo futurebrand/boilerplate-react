@@ -1,74 +1,12 @@
 {
-  "extends": ["google", "prettier", "plugin:jsx-a11y/recommended"],
-  "plugins": ["react", "react-hooks", "prettier", "jsx-a11y", "compat"],
-  "settings": {
-    "polyfills": ["fetch"]
-  },
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 2017,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "env": {
-    "browser": true,
-    "node": true,
-    "jest": true,
-    "es6": true
-  },
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "strict": 0,
-    "compat/compat": 2,
-    "require-jsdoc": 0,
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "react/no-find-dom-node": 0,
-    "react/no-children-prop": 0,
-    "quotes": 1,
-    "global-require": "off",
-    "new-cap": [
+    "prettier/prettier": [
       "error",
       {
-        "capIsNew": false
+        "singleQuote": true
       }
-    ],
-    "skipBlankLines": 0,
-    "func-call-spacing": ["error", "never"],
-    "space-before-function-paren": ["error", "never"],
-    "object-curly-spacing": ["error", "always"],
-    "multiline-ternary": 0,
-    "one-var": ["error", { "initialized": "never" }],
-    "guard-for-in": 0,
-    "no-invalid-this": 0,
-    "no-console": ["error", { "allow": ["tron"] }],
-    "no-debugger": 1,
-    "comma-spacing": [
-      "error",
-      {
-        "before": false,
-        "after": true
-      }
-    ],
-    "array-bracket-spacing": [
-      2,
-      "always",
-      {
-        "objectsInArrays": false
-      }
-    ],
-    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
-    "jsx-a11y/label-has-for": [
-      2,
-      {
-        "components": ["Label"],
-        "required": {
-          "some": ["nesting", "id"]
-        },
-        "allowChildren": false
-      }
-    ],
-    "react-hooks/rules-of-hooks": "error"
+    ]
   }
 }

@@ -1,23 +1,16 @@
 {
-  "stylelint.enable": true,
   "editor.formatOnSave": true,
-  "javascript.format.enable": true,
-  "workbench.editor.enablePreview": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.tabSize": 2,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true
+    "**/.DS_Store": true,
+    "node_modules": true
   },
-  "scss.validate": false,
-  "css.validate": false,
-  "eslint.autoFixOnSave": true,
-  "eslint.run": "onSave",
-  "prettier.singleQuote": true,
-  "emmet.includeLanguages": {
-    "nunjucks": "html",
-    "erb": "html"
-  }
+  "prettier.disableLanguages": ["javascript", "javascriptreact"]
 }
